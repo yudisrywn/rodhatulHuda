@@ -1,0 +1,496 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f9f9f9;
+}
+body,
+ul,
+li,
+h1,
+a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  background: linear-gradient(to right, #f4c842, #ffc000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  border: 2px solid #d89e00;
+  position: sticky;
+  z-index: 9999;
+  top: 0; /* Menempel di atas saat digeser */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  /* background-color: #343a40; Warna latar belakang navbar
+  transition: background-color 0.3s; Transisi halus untuk perubahan warna */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.bee-left img {
+  height: 50px;
+  width: auto;
+  position: absolute;
+  left: -70px;
+  animation: fly-left 5s infinite ease-in-out;
+}
+
+.bee-right img {
+  height: 50px;
+  width: auto;
+  position: absolute;
+  right: -70px;
+  animation: fly-right 5s infinite ease-in-out;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  background-color: #ffd95c;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: 2px solid white;
+  border-radius: 5px;
+  background: #f4a742;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background: white;
+  color: #f4a742;
+}
+/* .navbar:hover {
+  background-color: #495057; Warna latar belakang saat hover
+} */
+
+.nav-link {
+  color: #ffffff; /* Warna teks link */
+  transition: color 0.3s, transform 0.3s; /* Transisi untuk warna dan transformasi */
+}
+
+.nav-link:hover {
+  color: #f8f9fa; /* Warna teks saat hover */
+  transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+.navbar-brand {
+  font-size: 1.5rem; /* Ukuran font untuk nama brand */
+  font-weight: bold; /* Menebalkan teks brand */
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan pada navbar */
+}
+
+/* Judul */
+.welcome-title {
+  font-style: poppins;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #ffc000;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(40) 1s infinite;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* Judul Selesai */
+.welcome-text {
+  font-style: poppins;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #f8f9fa;
+  margin-top: 10px; /* Jarak atas untuk teks */
+  line-height: 1.5; /* Jarak antar baris untuk teks */
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin: 50px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(to bottom, #fad432, #ffe15f);
+  padding: 20px;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s;
+}
+
+h2:hover {
+  transform: scale(1.03);
+}
+
+p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.5;
+  text-align: center;
+}
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.banner {
+  background: url("images/rabaru.png") no-repeat center center;
+  background-size: cover;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  color: #fff;
+}
+
+.profil-sekolah {
+  text-align: left;
+}
+
+.profil-sekolah p {
+  margin: 0;
+  padding: 0;
+}
+
+.lingkaran {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 150px;
+  margin: 0 auto;
+  height: 150px;
+  color: #fff;
+  background-color: #dc3545;
+}
+
+.lingkaran i {
+  position: relative;
+  top: 30px;
+}
+
+.sejarah {
+  text-align: center;
+}
+
+.crop-img {
+  object-fit: cover;
+}
+
+.tim img {
+  width: 250px;
+  border: 10px solid #fffdfd;
+}
+
+.kontak {
+  padding-bottom: 20%;
+  padding-top: 20%;
+  color: black;
+  text-align: center;
+}
+
+.display-6,
+.text-center p {
+  color: black;
+}
+
+.carousel-indicators {
+  position: relative;
+  max-width: 900px;
+  height: 500px;
+  margin: 50px auto;
+  overflow: hidden;
+  border: 5px solid #fffdfd;
+  border-radius: 10px;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.2s ease-in-out;
+}
+
+.slides img {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fffdfd;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+button.prev:hover,
+button.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.display-3,
+.display-6 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.daftar {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #2c9caf;
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #2c9caf;
+  margin-top: 50px;
+}
+
+.daftar::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #2c9caf;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+.daftar:hover::before {
+  width: 250%;
+}
+
+.daftar:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid #70bdca;
+  box-shadow: 4px 5px 17px -4px #268391;
+}
+
+button.galeri:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid #70bdca;
+  box-shadow: 4px 5px 17px -4px #268391;
+}
+
+button.galeri::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #2c9caf;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+button:hover::before {
+  width: 250%;
+}
+body {
+  background-image: url("background-kids.jpg"); /* Ganti dengan URL gambar latar belakang */
+  background-size: cover; /* Mengatur gambar agar menutupi seluruh latar belakang */
+  background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+}
+
+body,
+.gradasi-linear {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    to bottom,
+    #96d4f8,
+    #fffdfd
+  ); /* Gradasi biru gelap ke putih */
+}
+
+.character {
+  width: 80px; /* Ukuran gambar karakter */
+  margin: 10px; /* Margin di sekitar gambar */
+  transition: transform 0.3s; /* Efek transisi */
+}
+
+.character:hover {
+  transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+.icon {
+  width: 50px; /* Ukuran ikon */
+  margin: 10px; /* Margin di sekitar ikon */
+  transition: transform 0.3s; /* Efek transisi */
+}
+
+.icon:hover {
+  transform: rotate(15deg); /* Efek rotasi saat hover */
+}
+
+.card-text {
+  font-size: 15px;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.teks {
+  float: right;
+  width: 80%;
+  margin: 40px;
+}
+
+.teks2 {
+  float: left;
+  width: 80%;
+  margin: 70px;
+}
+
+.row {
+  margin-bottom: 70px; /* Memberikan jarak antar baris */
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.flex-column {
+  padding-top: 20px;
+}
+
+.align-items-center {
+  display: flex; /* Memastikan elemen dapat diatur dengan flexbox */
+  justify-content: center;
+  height: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.clearfix {
+  margin-bottom: 50px;
+}
+
+.card-img-top {
+  width: 100%; /* Mengatur lebar gambar menjadi 100% dari lebar card */
+  max-width: 300px; /* Mengatur lebar maksimum gambar */
+  max-height: 250px;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+/* Animasi bee */
+@keyframes fly-left {
+  0% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) translateX(20px) rotate(10deg);
+  }
+  50% {
+    transform: translateY(0px) translateX(40px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(10px) translateX(20px) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+}
+
+/* Animasi untuk lebah kanan */
+@keyframes fly-right {
+  0% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(10px) translateX(-20px) rotate(-10deg);
+  }
+  50% {
+    transform: translateY(0px) translateX(-40px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10px) translateX(-20px) rotate(10deg);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+}
+/* Animasi bee selesai */
+
+.card {
+  border: none;
+  overflow: hidden;
+}
+.card-image img {
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.card-image img:hover {
+  transform: scale(1.05);
+}
